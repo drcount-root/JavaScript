@@ -216,3 +216,24 @@ const miniMaxSum = arra => {
 
 const arra = [5, -4, 0, 2, 3];
 console.log(miniMaxSum(arra));
+//
+//
+//
+//
+//
+//
+// BUG & FIX
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    value: Number(prompt('Degrees celsius:')),
+  };
+
+  console.table(measurement);
+
+  const inKelvin = measurement.value + 273;
+  return inKelvin;
+};
+
+console.log(measureKelvin());
