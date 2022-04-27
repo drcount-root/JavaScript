@@ -6,10 +6,10 @@
 // const calcAge = birthYear => 2037 - birthYear;
 
 // // QUESTION
-// // FIXME
+// // FIX
 // // NOTE
 // // BUG
-// // LEC
+// // LECTURE
 // // TODO
 
 // console.log(calcAge(1991));
@@ -222,18 +222,54 @@ console.log(miniMaxSum(arra));
 //
 //
 //
-// BUG & FIX
+// BUG & FIX LECTURE
+//
 const measureKelvin = function () {
   const measurement = {
     type: 'temp',
     unit: 'celsius',
     value: Number(prompt('Degrees celsius:')),
+    // The bug was that the value variable here takes input as string from the prompt. We have converted that to number using Number()
   };
 
-  console.table(measurement);
+  console.table(measurement); // Shows in the format of table
 
   const inKelvin = measurement.value + 273;
   return inKelvin;
 };
 
 console.log(measureKelvin());
+//
+//
+//
+//
+// BUG & FIX LECTURE
+//
+// Here it shows 0 as minimum temp
+//
+const t1 = [3, 5, 1];
+const t2 = [9, 4, 5];
+
+const calValidAmpTemp = (temp1, temp2) => {
+  const finalInTemp = temp1.concat(temp2);
+  let maxTemp = 0;
+  let minTemp = 0;
+  for (let i = 0; i < finalInTemp.length; i++) {
+    if (typeof finalInTemp[i] !== 'number') continue;
+    // debugger; // opens debugger automatically when execution reaches at the point. It's not necessary to put this keyword, we can open it in Chrome Dev Tool => Sources manually.
+    /*breakpoint*/ if (maxTemp < finalInTemp[i])
+      /*breakpoint*/ maxTemp = finalInTemp[i];
+    /*breakpoint*/ if (minTemp > finalInTemp[i])
+      /*breakpoint*/ minTemp = finalInTemp[i];
+    // If we put breakpoints using CDT(Chrome Dev Tool) at these points we can see what happens
+  }
+  return `MaxTemp = ${maxTemp}  |  MinTemp = ${minTemp}  |  Amplitude temparature = ${
+    maxTemp - minTemp
+  }`;
+};
+console.log(calValidAmpTemp(t1, t2));
+// We can fix this easily using let maxTemp = finalInTemp[0]; & let minTemp = finalInTemp[0];
+// The bug was,
+// let minTemp = finalInTemp[0];
+// if (minTemp > finalInTemp[i]) minTemp = finalInTemp[i];
+// So 0 is not bigger than any of the items of the finalInTemp array. That's the bug
