@@ -270,6 +270,6 @@ const calValidAmpTemp = (temp1, temp2) => {
 console.log(calValidAmpTemp(t1, t2));
 // We can fix this easily using let maxTemp = finalInTemp[0]; & let minTemp = finalInTemp[0];
 // The bug was,
-// let minTemp = finalInTemp[0];
+// let minTemp = 0;
 // if (minTemp > finalInTemp[i]) minTemp = finalInTemp[i];
 // So 0 is not bigger than any of the items of the finalInTemp array. That's the bug
