@@ -3,8 +3,14 @@
   <head>
     <title>Learning HTML & CSS</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        background-color: lightblue;
+      }
+    </style>
   </head>
-  <body>
+  <body style="background-color: lightgray">
     <h1>JavaScript is fun, but so is HTML & CSS!</h1>
     <p class="first">
       You can learn JavaScript without HTML & CSS, but for DOM manipulation it's
@@ -26,7 +32,8 @@
     <form id="your-name">
       <h2>Your name here</h2>
       <p>Please fill in this form :)</p>
-      <input type="text" placeholder="Your name" />
+      <input type="text" placeholder="username" />
+      <input type="password" placeholder="password" />
       <button>OK!</button>
     </form>
   </body>
