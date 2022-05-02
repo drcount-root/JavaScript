@@ -1,2 +1,2 @@
 # JavaScript
-JS codes
+JavaScript : Learn by doing
