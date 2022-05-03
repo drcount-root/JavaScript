@@ -6,7 +6,7 @@
 // for class
 console.log(document.querySelector(".message").textContent);
 // for id
-// console.log(document.querySelector("#message"));
+// console.log(document.querySelector("#message").textContent);
 // for tag
 // console.log(document.querySelector("h1").textContent);
 //
