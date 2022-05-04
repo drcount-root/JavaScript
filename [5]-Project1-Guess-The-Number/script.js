@@ -27,14 +27,22 @@
 //
 //
 //
+// The number entered into the input is logged into the console when we click the button
+// document.querySelector(".check").addEventListener("click", function () {
+//   console.log(document.querySelector(".guess").value);
+// });
 //
-//project
-document.querySelector(".check").addEventListener("click", function () {
-  console.log(document.querySelector(".guess").value);
-});
-
-// This is to show 🎉 Correct Guess 🎉 message in the right side and the number entered into the input is logged in the console when we click the button
+//
+// This is to show 🎉 Correct Guess 🎉 message in the right side and the number entered into the input is logged into the console when we click the button
 // document.querySelector(".check").addEventListener("click", function () {
 //   console.log(document.querySelector(".guess").value);
 //   document.querySelector(".message").textContent = "🎉 Correct Guess 🎉";
 // });
+//
+//
+//project-code
+document.querySelector(".check").addEventListener("click", function () {
+  const guess = document.querySelector(".guess").value;
+  console.log(guess);
+  console.log(typeof guess); // String type coz we are getting that value from an input section of the UI
+});
