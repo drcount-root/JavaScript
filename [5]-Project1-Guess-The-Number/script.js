@@ -32,3 +32,9 @@
 document.querySelector(".check").addEventListener("click", function () {
   console.log(document.querySelector(".guess").value);
 });
+
+// This is to show 🎉 Correct Guess 🎉 message in the right side and the number entered into the input is logged in the console when we click the button
+// document.querySelector(".check").addEventListener("click", function () {
+//   console.log(document.querySelector(".guess").value);
+//   document.querySelector(".message").textContent = "🎉 Correct Guess 🎉";
+// });
