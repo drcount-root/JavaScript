@@ -42,7 +42,11 @@
 //
 //project-code
 document.querySelector(".check").addEventListener("click", function () {
-  const guess = document.querySelector(".guess").value;
+  const guess = Number(document.querySelector(".guess").value);
   console.log(guess);
-  console.log(typeof guess); // String type coz we are getting that value from an input section of the UI
+  // console.log(typeof guess); // String type coz we are getting that value from an input section of the UI, until we convert it to number
+
+  if (!guess) {
+    document.querySelector(".message").textContent = "No number!";
+  }
 });
