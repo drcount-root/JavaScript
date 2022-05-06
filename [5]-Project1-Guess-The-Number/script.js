@@ -58,6 +58,10 @@ document.querySelector(".check").addEventListener("click", function () {
   // when the player wins
   else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "🎉 Correct Guess! 🎉";
+
+    // css manipulation
+    document.querySelector("body").style.backgroundColor = "#60b347";
+    document.querySelector(".number").style.width = "30rem";
   }
   // guess is too high
   else if (guess > secretNumber) {
