@@ -2,45 +2,42 @@
 
 //////// Creating an array ////////
 
-const friends = ['Mike', 'Jon', 'Peter'];  // friends is the array. Length of friends array is 3
+const friends = ["Mike", "Jon", "Peter"]; // friends is the array. Length of friends array is 3
 // 0th element = friends[0] = 'Mike'     1st element = friends[1] = 'Jon'    2nd element = friends[2] = 'Peter'
 console.log("");
-
 
 /*
 
 const years = new Array(1997, 'I am', false);  // Another way to declare an array, using new keyword. Array() is a function.
 // Here years is the array. Length = 3.   years[0] = 1997   years[1] = 'I am'   years[2] = false
 console.log(years);
+//const arr = new Array(1, 2, 3, 4, 5);
+//The Array() constructor is used to create Array objects.
+//console.log(arr);
 
 */
-
 
 //////// Reading an array ////////
 
 console.log(friends);
 
-
 // Reading each elements of the array with index
 
-console.log(`\n0th element : ${friends[0]}`);   // 'Mike'
-console.log(`1st element : ${friends[1]}`);   // 'Jon'
-console.log(`2nd element : ${friends[2]}`);   // 'Peter'
-
+console.log(`\n0th element : ${friends[0]}`); // 'Mike'
+console.log(`1st element : ${friends[1]}`); // 'Jon'
+console.log(`2nd element : ${friends[2]}`); // 'Peter'
 
 // Length of the array
 
 console.log(`\nfriends array length : ${friends.length}`);
 
-
 // Get the last element of the array
 
 console.log(`\nLast element of friends array : ${friends[friends.length - 1]}`);
 
-
 //////// Updating an element of the array using index ////////
 
-friends[1] = 'Berlin';
+friends[1] = "Berlin";
 console.log("");
 console.log(friends);
 
@@ -72,14 +69,10 @@ console.log(friends);
 
 */
 
-
-
 ////////// Array length when there are another sub-arrays
 
 // const arrX = [1, [2, 3], [4, 5, 6], 7, 8, 9];
 // console.log(arrX.length);         // 6. As sub-arrays are just like single items to the main array.
-
-
 
 //////////  To access the depth / level of array
 
@@ -92,12 +85,9 @@ console.log(friends);
 
 // console.log(arrX[2].length);
 
-
-
 ////////// Some basic exercise using array //////////
 
 // const calcAge = birthYears => 2037 - birthYears;
-
 
 // const years = [1990, 1967, 2002, 2010, 2018];
 
@@ -116,24 +106,7 @@ for (let i = 0; i < years.length; i++) {
 }
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /////////////////////  Array Methods  /////////////////////
-
 
 // MUTABLE ARRAY METHODS //
 
@@ -151,29 +124,20 @@ for (let i = 0; i < years.length; i++) {
 // const arr = new Array(1997, "Hi");
 // console.log(arr);
 
-
 // arr.push("Sh", 2008);   // pushing multiple items into the array
 
 // console.log(arr);
 
-
 // arr.push([2000, "Nabhan"]);    // pushing another array into the array
 
 // console.log(arr);
-
 
 // arr.push([1967, "Shriya"], [5, 69, "Bikas"]);    // pushing multiple arrays into the array
 // newArr = [1967, "Shriya"]; arr.push(newArr);
 
 // console.log(arr);
 
-
 // console.log(arr.length);
-
-
-
-
-
 
 /////////////////////  arr_name.unshift()  /////////////////////
 /////////// Add elements at first index of the array | Mutates the original array ///////////
@@ -184,23 +148,17 @@ for (let i = 0; i < years.length; i++) {
 
 // console.log(arr.unshift("Nox"));  // Length of the mutated array after adding "Nox"
 
-
-
 // const arr = ["Jay", "Roy", "Bob"];
 
 // arr.unshift("Sh", 2008);   // unshifting multiple items into the array
 
 // console.log(arr);
 
-
-
 // const arr = ["Jay", "Roy", "Bob"];
 
 // arr.unshift([2000, "Nabhan"]);    // unshifting another array into the array
 
 // console.log(arr);
-
-
 
 // const arr = ["Jay", "Roy", "Bob"];
 
@@ -209,13 +167,8 @@ for (let i = 0; i < years.length; i++) {
 // console.log(arr);
 // console.log(arr.length);
 
-
-
-
-
 /////////////////////  arr_name.pop()  /////////////////////
 /////////// Remove last element of the array | Mutates the array ///////////
-
 
 // const arr = [1, "Hi", 2, "Hey", 3, "Hello"];
 
@@ -224,18 +177,12 @@ for (let i = 0; i < years.length; i++) {
 
 // console.log(arr);       // mutate the original array by removing the last element
 
-
 // const arr = [];
 // console.log(arr.pop());  // undefined
 // console.log(arr);          // original array not modified as it is empty
 
-
-
-
-
 /////////////////////  arr_name.shift()  /////////////////////
 /////////// Remove first element of the array | Mutates the array ///////////
-
 
 // const arr = [1, "Hi", 2, "Hey", 3, "Hello"];
 
@@ -248,12 +195,8 @@ for (let i = 0; i < years.length; i++) {
 // console.log(arr.shift());  // undefined
 // console.log(arr);          // original array not modified as it is empty
 
-
-
-
 /////////////////////  arr_name.indexOf()  /////////////////////
 /////////// To get the position of a certain element in the array | does not mutates the array ///////////
-
 
 // const arr = ["Michael", "Steven", "Jamse"];
 // console.log(arr.indexOf("Jamse"));       // returns the index of "Jamse" = 2
@@ -261,20 +204,14 @@ for (let i = 0; i < years.length; i++) {
 //If the element doesn't exists in the array
 // console.log(arr.indexOf("Rahul")); // returns -1
 
-
-
-
-
 /////////////////////  arr_name.includes()  /////////////////////
 /////////// To find if a certain element presents in the array or not | does not mutates the array ///////////
-
 
 // const arr = ["Michael", "Steven", "Jamse"];
 
 // console.log(arr.includes("Bob"));          // strict equality check of this method returns false
 
 // console.log(arr.includes("Steven"));       // strict equality check of this method returns true
-
 
 // const arr = [1, "34", "78", 23, 56];
 // console.log(arr.includes(78));       // strict equality check of this method returns false as 78 === "78" evalutes false
@@ -283,16 +220,9 @@ for (let i = 0; i < years.length; i++) {
 
 // ***** Doesn't happen type-coercion in includes() method
 
-
-
-
-
-
-
 //////// Mutable array methods ////////
 /////// Mutates the original array ///////
 // push()   unshift()   pop()   shift()   reverse()   sort()   splice()
-
 
 //////// Immutable array methods ////////
 /////// Returns new array ///////
