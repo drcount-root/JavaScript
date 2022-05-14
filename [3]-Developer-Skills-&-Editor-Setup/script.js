@@ -24,6 +24,9 @@
 // QUESTION We have a temparature array with somthing error including with the values.
 // We have to eleminate that error ('error' string in this case) and then calculate the max
 // and min temparature from the array. And then the amplitude temparature (max - min).
+console.log(
+  "--------------------- temp calc on single array ---------------------"
+);
 
 const temp = [12, false, -5, "red", 9, -7, "error"];
 
@@ -64,6 +67,9 @@ console.log(
 //
 //
 // QUESTION Now device modified to take two temperature arrays
+console.log(
+  "--------------------- temp calc on two arrays at once ---------------------"
+);
 
 const temparatures_1 = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
 const temparatures_2 = [false, 26, 0, "ERR", 0, -5, "error", -10];
@@ -111,6 +117,8 @@ console.log(theF(temparatures_2));
 //
 //
 //QUESTION Grading
+console.log("--------------------- grading ---------------------");
+
 const gradeArr = [73, 67, 38, 33];
 
 const gradingStuds = (grade) => {
@@ -141,6 +149,8 @@ for (let i = 0; i < gradeArr.length; i++) {
 //
 //
 //QUESTION Grading
+console.log("--------------------- grading using map() ---------------------");
+
 function gradingStudents(grades) {
   // Used map high order array method to single out each element in array
   return grades.map((n) => {
@@ -164,6 +174,10 @@ console.log(gradingStudents(gRades)); // Outputs:  [4,75,67,40,33]
 //
 //
 //QUESTION Staircase
+console.log(
+  "--------------------- use of repeat() method ---------------------"
+);
+
 const staircase = function (n) {
   for (let i = 1; i <= n; i++) {
     console.log(" ".repeat(n - i) + "#".repeat(i));
@@ -183,20 +197,18 @@ console.log(staircase(5));
 //
 //
 //
-const arr = [2, 1, 10];
-
 //QUESTION To align the arr-items in descending order
-function sumOfDifferences(arr) {
-  arr.sort((a, b) => b - a);
-  let sum = 0;
-  for (let i = 0; i < arr.length - 1; ++i) {
-    sum += arr[i] - arr[i + 1];
-  }
-  return sum;
+console.log(
+  "--------------------- align array items in descending order ---------------------"
+);
+
+const arr = [2, 1, 10, 0, -3];
+function alignArr(arr) {
+  let sortedArr = arr.sort((a, b) => b - a);
+  return sortedArr;
 }
 
-console.log(sumOfDifferences(arr));
-//
+console.log(alignArr(arr));
 //
 //
 //
@@ -207,6 +219,7 @@ console.log(sumOfDifferences(arr));
 //
 //
 //QUESTION Mini-Max Sum
+console.log("--------------------- Mini-Max Sum ---------------------");
 const miniMaxSum = (arra) => {
   let sum = arra.reduce((a, b) => a + b);
   let maxValue = Math.max(...arra);
