@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecting DOM element nodes</title>
+  </head>
+  <body>
+    <h1>This is a h1</h1>
+    <h3 class="first-class">This is a h3</h3>
+    <h5 id="first-id">This is a h5</h5>
+
+    <script>
+      'use script';
+      //
+      // Reading element node contents
+      //
+      // selecting by element or tag
+      const theFirstHeading = document.querySelector('h1');
+      console.log(theFirstHeading.textContent);
+
+      // selecting by class
+      const theSecondHeading = document.querySelector('.first-class');
+      console.log(theSecondHeading.textContent);
+
+      // selecting by id
+      const theThirdHeading = document.querySelector('#first-id');
+      console.log(theThirdHeading.textContent);
+    </script>
+  </body>
+</html>
