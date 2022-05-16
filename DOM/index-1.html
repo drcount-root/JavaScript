@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selecting DOM element nodes</title>
+  </head>
+  <body>
+    <h1>This is a h1</h1>
+    <h3 class="first-class">This is a h3</h3>
+    <h5 id="first-id">This is a h5</h5>
+
+    <script>
+      "use script";
+      //
+      // Reading element node contents
+      //
+      // selecting by element or tag
+      console.log(
+        "------------- selecting by querySelector() method -------------"
+      );
+
+      const theFirstHeading = document.querySelector("h1");
+      console.log(theFirstHeading.textContent);
+
+      // selecting by class
+      const theSecondHeading = document.querySelector(".first-class");
+      console.log(theSecondHeading.textContent);
+
+      // selecting by id
+      const theThirdHeading = document.querySelector("#first-id");
+      console.log(theThirdHeading.textContent);
+      //
+      //
+      //
+      //
+      //
+      console.log(
+        "------------- selecting by getElementsByTagName() method -------------"
+      );
+      const one = document.getElementsByTagName("h1");
+      console.log(one);
+
+      // The HTMLCollection interface represents a generic collection (array-like object similar to arguments) of elements (in document order) and offers methods and properties for selecting from the list.
+
+      // An HTMLCollection in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (eg. using Array.from) to iterate over if adding, moving, or removing nodes.
+
+      // The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object.
+
+      // textContent gets the content of all elements, including <script> and <style> elements. In contrast, innerText only shows "human-readable" elements.
+
+      console.log(one[0]);
+      console.log(one[0].innerText);
+    </script>
+  </body>
+</html>
