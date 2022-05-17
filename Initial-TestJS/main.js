@@ -77,3 +77,22 @@ console.log(paragraphFirst.innerText);
 paragraphFirst.innerText =
   "This is a paragraph used for testing - The updated thing"; // Updated in UI/DOM
 console.log(paragraphFirst.innerText);
+//
+//
+//
+//
+//
+//
+//
+//
+console.log(
+  "\n\n--------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+);
+console.log(
+  "------------------------------ (CREATE) tag, class & id element & selectors creating using innerText property or textContent property ------------------------------"
+);
+console.log(
+  "--------------------------------------------------------------------------------------------------------------------------------------------------------------------\n"
+);
+// CREATE
+
