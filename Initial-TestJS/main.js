@@ -92,7 +92,31 @@ console.log(
   "------------------------------ (CREATE) tag, class & id element & selectors creating using innerText property or textContent property ------------------------------"
 );
 console.log(
-  "--------------------------------------------------------------------------------------------------------------------------------------------------------------------\n"
+  "--------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 );
 // CREATE
 
+// Creates a new element node: <p></p>
+const paraElement = document.createElement("p");
+
+// Set text inside it - <p>innerText property refers to the text inside an element</p>
+paraElement.innerText =
+  "innerText property refers to the text inside an element";
+
+// Get the object referring to the body element on the page
+const bodyElement = Array.from(document.getElementsByTagName("body"));
+
+// Add the newly created <p></p> element as a child of the body element
+const vis = bodyElement[0].appendChild(paraElement);
+console.log("\n");
+console.log(vis.innerText);
+
+/////////////////////////////////////////
+const divElem = document.createElement("div");
+divElem.innerText = "This is a div";
+const bodElem = Array.from(document.getElementsByTagName("body"));
+bodElem[0].appendChild(divElem);
+divElem.style.border = "1px solid red";
+divElem.style.padding = "15px";
+divElem.style.textAlign = "center";
+divElem.style.margin = "0 40%";
