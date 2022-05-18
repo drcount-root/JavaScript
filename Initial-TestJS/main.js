@@ -111,16 +111,33 @@ const vis = bodyElement[0].appendChild(paraElement);
 console.log("\n");
 console.log(vis.innerText);
 
-/////////////////////////////////////////
+////////////////////////////////////////
+// Creating a div  - just for practice
+//
+// Creating a new element node <div></div>
 const divElem = document.createElement("div");
-divElem.innerText = "This is a div";
+divElem.classList.add("parent-div"); // adding class to divElem div tag
+// Assigning text to it
+// divElem.innerText = "Parent div";
+const hElem = document.createElement("h1");
+hElem.innerText = "Parent div";
 const bodElem = Array.from(document.getElementsByTagName("body"));
 bodElem[0].appendChild(divElem);
+divElem.appendChild(hElem);
 
 // These are stylings
 divElem.style.border = "2px solid blueviolet";
 divElem.style.padding = "15px";
 divElem.style.textAlign = "center";
 divElem.style.margin = "0 40%";
-divElem.innerHTML = "<h1>Heading - h1</h1><hr><p>This is a paragraph</p>";
+
+// Child div inside parent div
+const childDiv = document.createElement("div");
+childDiv.innerHTML =
+  "<h1>Child div</h1><b>append() vs appendChild()</b><hr><br>append() accepts Node objects and DOMStrings while appendChild() accepts only Node objects</b>";
+divElem.appendChild(childDiv);
+childDiv.style.border = "2px solid dodgerblue";
+childDiv.style.padding = "15px";
+// divElem.innerHTML = "<h1>Heading - h1</h1><hr><p>This is a paragraph</p>";
 //
+////////////////////////////////////////
