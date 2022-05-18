@@ -116,8 +116,11 @@ const divElem = document.createElement("div");
 divElem.innerText = "This is a div";
 const bodElem = Array.from(document.getElementsByTagName("body"));
 bodElem[0].appendChild(divElem);
+
+// These are stylings
 divElem.style.border = "2px solid blueviolet";
 divElem.style.padding = "15px";
 divElem.style.textAlign = "center";
 divElem.style.margin = "0 40%";
 divElem.innerHTML = "<h1>Heading - h1</h1><hr><p>This is a paragraph</p>";
+//
