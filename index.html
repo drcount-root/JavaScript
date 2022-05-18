@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jsBOSS</title>
+    <style></style>
   </head>
   <body>
-    <h1>Welcome to JS BOSS!</h1>
+    <script>
+      const bodyElem = Array.from(document.getElementsByTagName("body"));
+      const h1Elem = document.createElement("h1");
+      h1Elem.innerText = "@ JS-BOSS!";
+      bodyElem[0].appendChild(h1Elem);
+      h1Elem.style.textAlign = "center";
+    </script>
   </body>
 </html>
