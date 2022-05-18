@@ -116,7 +116,9 @@ console.log(vis.innerText);
 //
 // Creating a new element node <div></div>
 const divElem = document.createElement("div");
-divElem.classList.add("parent-div"); // adding class to divElem div tag
+// divElem.classList.add("parent-div"); // adding class to divElem div tag
+divElem.setAttribute("class", "parent-div");
+// For id divElem.setAttribute("id", "id_name");
 // Assigning text to it
 // divElem.innerText = "Parent div";
 const hElem = document.createElement("h1");
