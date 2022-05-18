@@ -2,7 +2,7 @@ const bodyElem = Array.from(document.getElementsByTagName("body"));
 
 // Create
 const parentDivElem = document.createElement("div");
-parentDivElem.setAttribute("class", "parentDiv");
+parentDivElem.setAttribute("class", "parentDiv"); // Creating a class named parentDiv
 
 parentDivElem.innerHTML = "<h1>Heading</h1><hr><p>Paragraph</p>";
 
@@ -15,4 +15,4 @@ parentDivElem.appendChild(a);
 const ulList = document.createElement("ul");
 ulList.innerHTML = "<li>A</li><li>B</li><li>C</li>";
 parentDivElem.appendChild(ulList);
-ulList.setAttribute("class", "parentDiv");
+ulList.classList.add("parentDiv"); // using / adding a previously created class inside the element
