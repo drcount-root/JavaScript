@@ -163,3 +163,55 @@ const ulList = document.createElement('ul');
 ulList.innerHTML = '<li>A</li><li>B</li><li>C</li>';
 parentDivElem.appendChild(ulList);
 ulList.classList.add('parentDiv'); // using / adding a previously created class inside the element
+
+//
+//
+//
+//
+//
+////////////// -------------------------------------------  append() vs appendChild() ------------------------------------------- //////////////
+//
+
+// ----------------------------------------------------------------------------------------------------
+
+//// 1. Difference between append() and appendChild() methods are like - append() method is used to add Node objects and DOMStrings while appendChild() is used to add only Node objects
+
+// const parent = document.createElement('div');
+// const child = document.createElement('p');
+
+// // Appending Node Objects
+// parent.append(child)    // Works fine
+// parent.appendChild(child)    // Works fine
+
+// // Appending DOMStrings
+// parent.append('Hello world')    // Works fine
+// parent.appendChild('Hello world')    // Throws error
+
+// ----------------------------------------------------------------------------------------------------
+
+//// 2. append() does not have a return value while appendChild() returns the appended Node object
+
+// const parent = document.createElement('div');
+// const child = document.createElement('p');
+
+// const appendValue = parent.append(child);
+// console.log(appendValue);    // undefined
+
+// const appendChildValue = parent.appendChild(child);
+// console.log(appendChildValue);    // <p><p>
+
+// ----------------------------------------------------------------------------------------------------
+
+//// 3. append() allows you to add multiple items while appendChild() allows only a single item
+
+// const parent = document.createElement('div');
+// const child = document.createElement('p');
+// const childTwo = document.createElement('p');
+
+// parent.append(child, childTwo, 'Hello world');    // Works fine
+
+// parent.appendChild(child, childTwo, 'Hello world');    // Works fine, but adds the first element and ignores the rest
+
+// ----------------------------------------------------------------------------------------------------
+
+// IN CONCLUSION: where we can use appendChild(), we can use append() but not vice versa.
