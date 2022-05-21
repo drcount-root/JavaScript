@@ -1,15 +1,14 @@
 "use strict";
 
-// const body = document.body;
-// body.append("Hello using append() in body");
-// append() method is used to append strings
+// TACTICAL-THINGS
 
-// const body = document.body;
-// //Creating a <div></div> element
-// const divEle = document.createElement("div");
-// divEle.innerHTML = "<h1>This is a heading - h1</h1>";
-// body.append(divEle);
-// divEle.style.backgroundColor="blueviolet";
+// The HTMLCollection interface represents a generic collection (array-like object similar to arguments but not exactly an array) of elements (in document order) and offers methods and properties for selecting from the list.
+
+// An HTMLCollection in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (eg. using Array.from) to iterate over if adding, moving, or removing nodes.
+
+// The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object. Where we can apply all array methods.
+
+// textContent gets the content of all elements, including <script> and <style> elements. In contrast, innerText only shows "human-readable" elements.
 
 console.log(
   "--------------------------------------------------------------------------------------------------------------------------------------------------------------------"
@@ -169,7 +168,7 @@ ulList.classList.add("parentDiv"); // using / adding a previously created class 
 //
 //
 //
-////////////// -------------------------------------------  append() vs appendChild() ------------------------------------------- //////////////
+////////////// ------------------------------------------- TACTICAL-THINGS append() vs appendChild() TACTICAL-THINGS ------------------------------------------- //////////////
 //
 
 // ----------------------------------------------------------------------------------------------------
