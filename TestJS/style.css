@@ -1,0 +1,17 @@
+.parentDivClass {
+  text-align: center;
+  border: 2px solid blueviolet;
+  margin: 0 35%;
+}
+
+.ulElemClass {
+  border: 2px solid blueviolet;
+  text-align: center;
+  margin: 0 40%;
+  list-style-type: none;
+  padding: 5px 20px;
+}
+
+.red {
+  color: yellow;
+}
