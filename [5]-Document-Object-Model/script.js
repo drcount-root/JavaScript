@@ -120,6 +120,8 @@ const divElem = document.createElement("div");
 // divElem.classList.add("parent-div"); // adding class to divElem div tag
 divElem.setAttribute("class", "parent-div");
 // For id divElem.setAttribute("id", "id_name");
+// setAttribute("type-of-selector-id-or-class", "name-of-that") is useful to create new calss or id
+// while classList.add() & classList.remove() is used better in adding or removing a class from an element
 // Assigning text to it
 // divElem.innerText = "Parent div";
 const hElem = document.createElement("h1");

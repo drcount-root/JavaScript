@@ -13,4 +13,4 @@
 // creating something
 const body = document.getElementsByTagName('body');
 const parentDiv = document.createElement("div");
-parentDiv.
+parentDiv.setAttribute("class", "parentDivClass");
