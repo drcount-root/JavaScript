@@ -81,3 +81,7 @@ newDiv.setAttribute('id', 'top');
 
 newDiv.innerHTML = `<div id = "nested">Section</div>`;
 body[0].appendChild(newDiv);
+
+const d = document.getElementById('top');
+const d_nested = document.getElementById('nested');
+const removeElem = d.removeChild(d_nested);
