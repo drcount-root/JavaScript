@@ -53,3 +53,11 @@ console.log(childLists[5].innerText);
 // deleting/removing <li>Meta</li>
 
 // First select
+const faangListToRem = document.getElementsByTagName('li');
+
+faangListToRem[2].remove();
+console.log(childLists.length);
+
+// .forEach((index, arr) => {
+//     console.log(arr[index]);
+// })
