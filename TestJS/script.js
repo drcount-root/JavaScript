@@ -20,8 +20,8 @@ body[0].appendChild(parentDiv);
 const ulElem = document.createElement('ul');
 ulElem.setAttribute('class', 'ulElemClass');
 ulElem.innerHTML = `<li>Adobe</li>
-                    <li>Meta</li>
                     <li>Apple</li>
+                    <li>Meta</li>
                     <li class= "red">Google</li>
                     <li>IBM</li>`;
 parentDiv.appendChild(ulElem);
