@@ -22,3 +22,10 @@
 .red {
   color: blue;
 }
+
+#top{
+  border: 1px solid red;
+  margin: 4% 20%;
+  text-align: center;
+  padding: 1%;
+}

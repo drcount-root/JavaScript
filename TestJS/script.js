@@ -6,7 +6,8 @@
 // console.log(`Removed element : ${rem}`);
 
 // TACTICAL-THINGS remove() vs removeChild()
-// ref: MDN
+// The element.remove() method removes the element from the DOM and returns value None (undefined)
+// The element.removeChild() method of the Node interface removes a child node from the DOM and returns the removed node.
 
 // remove()
 
@@ -63,3 +64,20 @@ console.log(childLists[1].innerText);
 console.log(childLists[2].innerText);
 console.log(childLists[3].innerText);
 console.log(childLists[4].innerText);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// element.removeChild()
+
+const newDiv = document.createElement('div');
+newDiv.setAttribute('id', 'top');
+
+newDiv.innerHTML = `<div id = "nested">Section</div>`;
+body[0].appendChild(newDiv);
