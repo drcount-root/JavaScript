@@ -28,7 +28,7 @@ parentDiv.appendChild(ulElem);
 
 // Accessing the list child items
 
-const ulList = document.getElementsByTagName('ul')[0];
+const ulList = Array.from(document.getElementsByTagName('ul'))[0];
 
 const childLists = ulList.children;
 console.log(`All list items of that unordered list as ${childLists}`);
@@ -44,5 +44,10 @@ console.log(childLists[4].innerText);
 const addNewList = document.createElement('li');
 addNewList.innerText = 'FAANG';
 ulList.appendChild(addNewList);
+
+// proof to console
+
+console.log(childLists.length);
+console.log(childLists[5].innerText);
 
 // deleting/removing <li>Meta</li>
