@@ -5,11 +5,18 @@
 }
 
 .ulElemClass {
+  display: flex;
+  flex-direction: column;
   border: 2px solid blueviolet;
   text-align: center;
   margin: 2% 20%;
   list-style-type: none;
   padding: 5px 40px;
+}
+
+.ulElemClass li {
+  border: 1px solid black;
+  padding: 2%;
 }
 
 .red {
