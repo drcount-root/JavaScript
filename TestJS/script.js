@@ -19,7 +19,7 @@ body[0].appendChild(parentDiv);
 
 const ulElem = document.createElement('ul');
 ulElem.setAttribute('class', 'ulElemClass');
-ulElem.innerHTML = `<li>Adobe</li>
+ulElem.innerHTML = `<li style = "color: red">Adobe</li>
                     <li>Apple</li>
                     <li>Meta</li>
                     <li class= "red">Google</li>
@@ -51,3 +51,5 @@ console.log(childLists.length);
 console.log(childLists[5].innerText);
 
 // deleting/removing <li>Meta</li>
+
+// First select
