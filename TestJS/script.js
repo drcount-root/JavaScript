@@ -58,10 +58,6 @@ const faangListToRem = document.getElementsByTagName('li');
 faangListToRem[2].remove();
 console.log(childLists.length);
 
-// .forEach((index, arr) => {
-//     console.log(arr[index]);
-// })
-
 console.log(childLists[0].innerText);
 console.log(childLists[1].innerText);
 console.log(childLists[2].innerText);
