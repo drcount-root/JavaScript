@@ -7,9 +7,9 @@
 .ulElemClass {
   border: 2px solid blueviolet;
   text-align: center;
-  margin: 0 40%;
+  margin: 2% 20%;
   list-style-type: none;
-  padding: 5px 20px;
+  padding: 5px 40px;
 }
 
 .red {

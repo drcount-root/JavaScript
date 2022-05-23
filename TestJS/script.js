@@ -26,4 +26,23 @@ ulElem.innerHTML = `<li>Adobe</li>
                     <li>IBM</li>`;
 parentDiv.appendChild(ulElem);
 
-// TODO : Remove <li>Apple</li> i.e. the 3rd list-item
+// Accessing the list child items
+
+const ulList = document.getElementsByTagName('ul')[0];
+
+const childLists = ulList.children;
+console.log(`All list items of that unordered list as ${childLists}`);
+
+console.log(childLists[0].innerText);
+console.log(childLists[1].innerText);
+console.log(childLists[2].innerText);
+console.log(childLists[3].innerText);
+console.log(childLists[4].innerText);
+
+// appending one list item <li>FAANG</li>
+
+const addNewList = document.createElement('li');
+addNewList.innerText = 'FAANG';
+ulList.appendChild(addNewList);
+
+// deleting/removing <li>Meta</li>
