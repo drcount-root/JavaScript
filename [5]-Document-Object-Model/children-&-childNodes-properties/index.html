@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>children & childNodes</title>
+  </head>
+  <body>
+    <script>
+      const body = Array.from(document.getElementsByTagName("body"))[0];
+      const ul = document.createElement("ul");
+      ul.innerHTML = "<li>A</li><li>B</li><li>C</li>";
+      body.appendChild(ul);
+      const child_nodes = ul.childNodes;
+      console.log(child_nodes[1].innerText);
+      const new_child = document.createElement("li");
+      new_child.innerText = "Added new child";
+      ul.appendChild(new_child);
+      // The same way we can use children property and get the same outputs
+    </script>
+  </body>
+</html>
