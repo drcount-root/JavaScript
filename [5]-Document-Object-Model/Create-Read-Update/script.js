@@ -1,6 +1,6 @@
 "use strict";
 
-// TACTICAL-THINGS
+// TACTICAL-THINGS  HTMLCollection
 
 // The HTMLCollection interface represents a generic collection (array-like object similar to arguments but not exactly an array) of elements (in document order) and offers methods and properties for selecting from the list.
 
@@ -9,6 +9,26 @@
 // The Array.from() static method creates a new, shallow-copied Array instance from an array-like or iterable object. Where we can apply all array methods.
 
 // textContent gets the content of all elements, including <script> and <style> elements. In contrast, innerText only shows "human-readable" elements.
+
+// An HTMLCollection is achieved by only - getElementsByTagName() & getElementsByClassName() & HTMLCollection are always live collection with respect to DOM.
+//
+//
+//
+//
+//
+// TACTICAL-THINGS  NodeList
+
+// NodeList objects are collection of nodes, usually returned by properties such as Node.childNodes and methods like querySelectorAll().NodeList is not an array, it is possible to iterate over it using forEach(). NodeList can also be coverted into Array using Array.from().
+
+// Two types of NodeList - 1. Static NodeList   2. Live or Dynamic NodeList
+
+// Static NodeList: Changes in DOM doesn't effect the content of the collection. querySelectorAll() method returns static NodeList
+
+// Live NodeList: Live with respect to DOM. 
+// Ex of Live NodeList:
+// const parent = document.getElementById("parent");
+// let child_nodes = parent.childNodes;
+// 
 
 console.log(
   "--------------------------------------------------------------------------------------------------------------------------------------------------------------------"
