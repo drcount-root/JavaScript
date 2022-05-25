@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+      p {
+        color: green;
+      }
+    </style>
+    <center>
+      <h1 style="color: green">children example</h1>
+      <h2>children</h2>
+
+      <button onclick="myChildren()">Try it</button>
+
+      <p id="para"></p>
+
+      <script>
+        function myChildren() {
+          var c = document.body.children;
+          var string = "";
+          var i;
+          for (i = 0; i < c.length; i++) {
+            string = string + c[i].tagName + "<br>";
+          }
+          document.getElementById("para").innerHTML = string;
+        }
+      </script>
+    </center>
+  </body>
+</html>

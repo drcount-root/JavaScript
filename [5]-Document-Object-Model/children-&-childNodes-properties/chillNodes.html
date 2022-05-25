@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+      p {
+        color: green;
+      }
+    </style>
+    <center>
+      <h1 style="color: green">childNodes</h1>
+      <h2>childNodes</h2>
+      <button onclick="childNode()">Try it</button>
+
+      <p id="geek"></p>
+
+      <script>
+        function childNode() {
+          //accessing all the child nodes present in our code
+          var childNode = document.body.childNodes;
+          var string = "";
+          var i;
+
+          for (i = 0; i < childNode.length; i++) {
+            string = string + childNode[i].nodeName + "<br>";
+          }
+
+          //appending the child nodes to paragraph with id "geek"
+          document.getElementById("geek").innerHTML = string;
+        }
+      </script>
+    </center>
+  </body>
+</html>
