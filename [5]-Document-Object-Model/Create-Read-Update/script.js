@@ -24,11 +24,14 @@
 
 // Static NodeList: Changes in DOM doesn't effect the content of the collection. querySelectorAll() method returns static NodeList
 
-// Live NodeList: Live with respect to DOM. 
+// Live NodeList: Live with respect to DOM.
 // Ex of Live NodeList:
+
 // const parent = document.getElementById("parent");
 // let child_nodes = parent.childNodes;
-// 
+// console.log(child_nodes.length);      assume it returns 2
+// parent.appendChild(document.createElement("div"));
+// console.log(child_nodes.length);      it will return 3 then
 
 console.log(
   "--------------------------------------------------------------------------------------------------------------------------------------------------------------------"
