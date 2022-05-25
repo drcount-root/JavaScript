@@ -25,7 +25,30 @@
 // Static NodeList: Changes in DOM doesn't effect the content of the collection. querySelectorAll() method returns static NodeList
 
 // Live NodeList: Live with respect to DOM.
-// Ex of Live NodeList:
+// Ex of Live NodeList: using childNodes property.
+
+// const parent = document.getElementById("parent");
+// let child_nodes = parent.childNodes;
+// console.log(child_nodes.length);      assume it returns 2
+// parent.appendChild(document.createElement("div"));
+// console.log(child_nodes.length);      it will return 3 then
+//
+//
+//
+//
+//
+//
+// TACTICAL-THINGS  HTMLCollection vs. NodeList
+
+// 1. HTMLCollection is collection of document elements, where NodeList is a collection of document nodes (element nodes, attribute nodes, text nodes)
+
+// 2. Items of HTMLCollection are accessed by their name, id and index.For NodeList, items are accessed using their index. For both indexing starting from 0.
+
+// 3. HTMLCollection is always live collection. NodeList is most often static collection
+
+// 4. An HTMLCollection is achieved by only - getElementsByTagName() & getElementsByClassName() & HTMLCollection are always live collection with respect to DOM.
+//    querySelectorAll() method returns static NodeList.
+// Ex of Live NodeList: using childNodes property.
 
 // const parent = document.getElementById("parent");
 // let child_nodes = parent.childNodes;
