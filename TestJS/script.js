@@ -14,9 +14,6 @@
 //
 //
 //
-//
-//
-//
 
 // function calcAge(birthYear) {
 //   const age = 2037 - birthYear;
@@ -55,6 +52,19 @@ function calcAge(birthYear) {
 
     // can access the 'age' value of variable as declared in it's parent/outer scope & can access the 'birthYear' parameter's argument (real-time value passed to a function) as that is also given in it's parent function's scope
     console.log(output);
+
+    if (birthYear >= 1981 && birthYear <= 1996) {
+      var millenial = true;
+      const str = `Oh, and you're a millenial, ${firstName}`;
+
+      // 'firstName' variable is accessible as it is globally declared variable & also the parent scope of this block have the access
+
+      console.log(str);
+    }
+
+    // console.log(str); // Reference Error as 'str' can't accessible by printAge(). As parent/outer scope don't have the access of child/inner scope varibale. This is block-scoped variable.
+
+    console.log(millenial); // 'millenial' is accessible here as variable declared with var keyword are function scoped. So it can be accessible inside the printAge() function.
   }
 
   printAge();
