@@ -17,11 +17,42 @@
 //
 //
 //
+
+// function calcAge(birthYear) {
+//   const age = 2037 - birthYear;
+
+//   function printAge() {
+//     const output = `You are ${age}, born in ${birthYear}`;
+//     // can access the 'age' value of variable as declared in it's parent/outer scope & can access the 'birthYear' parameter's argument (real-time value passed to a function) as that is also given in it's parent function's scope
+//     console.log(output);
+//   }
+
+//   printAge();
+
+//   return age;
+// }
+
+// const firstName = 'Jonas';
+
+// console.log(calcAge(1991));
+
+// console.log(age); // Reference Error as 'age' is block scoped to calcAge(). So it can only be accessible inside the calcAge() function.
+
+// printAge(); // Reference Error as we are calling this function globally although we can't access it globally. As only inner/child function can access it's outer/parent function scope. But not the vice-versa.
+//
+//
+//
+//
+//
+
 function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
   function printAge() {
-    const output = `You are ${age}, born in ${birthYear}`;
+    const output = `${firstName}, You are ${age}, born in ${birthYear}`;
+
+    // 'firstName' is globally declared variable, and have access inside calcAge() so inside parentAge()
+
     // can access the 'age' value of variable as declared in it's parent/outer scope & can access the 'birthYear' parameter's argument (real-time value passed to a function) as that is also given in it's parent function's scope
     console.log(output);
   }
@@ -34,7 +65,3 @@ function calcAge(birthYear) {
 const firstName = 'Jonas';
 
 console.log(calcAge(1991));
-
-// console.log(age); // Reference Error as 'age' is block scoped to calcAge(). So it can only be accessible inside the calcAge() function.
-
-// printAge(); // Reference Error as we are calling this function globally although we can't access it globally. As only inner/child function can access it's outer/parent function scope. But not the vice-versa.
