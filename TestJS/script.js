@@ -55,16 +55,27 @@ function calcAge(birthYear) {
 
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
+
+      const firstName = 'Steven'; // if we add this line of code, then in 'str' variable, the value of 'firstName' will be 'Steven' as the variable lookup happens inside the current scope first, and if find then it will not look anywhere else.
+
       const str = `Oh, and you're a millenial, ${firstName}`;
 
       // 'firstName' variable is accessible as it is globally declared variable & also the parent scope of this block have the access
 
       console.log(str);
+
+      function add(a, b) {
+        return a + b;
+      }
     }
 
     // console.log(str); // Reference Error as 'str' can't accessible by printAge(). As parent/outer scope don't have the access of child/inner scope varibale. This is block-scoped variable.
 
     console.log(millenial); // 'millenial' is accessible here as variable declared with var keyword are function scoped. So it can be accessible inside the printAge() function.
+
+    // console.log(add(2, 3)); // Reference Error as add() function is accessible only inside the if block. So this function is block scoped is this 'use strict' mode only.
+
+    // If 'use strict' mode is turned off, then it returns value 5. Accessible inside printAge().
   }
 
   printAge();
