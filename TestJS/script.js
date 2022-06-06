@@ -46,7 +46,7 @@ function calcAge(birthYear) {
   const age = 2037 - birthYear;
 
   function printAge() {
-    const output = `${firstName}, You are ${age}, born in ${birthYear}`;
+    let output = `${firstName}, You are ${age}, born in ${birthYear}`;
 
     // 'firstName' is globally declared variable, and have access inside calcAge() so inside parentAge()
 
@@ -67,6 +67,10 @@ function calcAge(birthYear) {
       function add(a, b) {
         return a + b;
       }
+
+      output = 'NEW OUTPUT';
+
+      // let output = 'NEW OUTPUT'; // If we did this, it will not effect. As it will be treated as a completely new variable & would not at all affect the output from the outer scope.
     }
 
     // console.log(str); // Reference Error as 'str' can't accessible by printAge(). As parent/outer scope don't have the access of child/inner scope varibale. This is block-scoped variable.
@@ -76,6 +80,8 @@ function calcAge(birthYear) {
     // console.log(add(2, 3)); // Reference Error as add() function is accessible only inside the if block. So this function is block scoped is this 'use strict' mode only.
 
     // If 'use strict' mode is turned off, then it returns value 5. Accessible inside printAge().
+
+    console.log(output); // logs 'NEW OUTPUT' as, we manipulated (reassigned) an existing variable of parent scope/outer scope (printAge()) inside of a child scope/inner scope (if block).
   }
 
   printAge();
