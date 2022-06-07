@@ -1,3 +1,5 @@
+'use strict';
+
 // Effect of hoisting on function declaration
 
 // Func declarations are hoisted or not? => Yes, they're hoisted.
