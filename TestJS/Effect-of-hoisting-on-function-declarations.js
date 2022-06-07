@@ -36,11 +36,13 @@ console.log(
 //
 console.log('\n-------- Strict Mode --------\n\n');
 
-"use strict";
+'use strict';
 
 console.log(calcAge);
 
 console.log(calcAge(20));
+
+// This calcAge() func is now block scoped as the code is written in 'Strict mode'.
 
 function calcAge(age) {
   return age + 5;
