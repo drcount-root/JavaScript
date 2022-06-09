@@ -13,7 +13,7 @@ console.log(
 
 // // Initial value => depends on, with which keyword it declared (either undefined or Ref Error).
 
-// // Scope => Only in 'use strict' mode they are block scoped. And in 'sloppy mode' the func declarations are function scoped
+// // Scope => Only in 'use strict' mode they are block scoped. And in 'sloppy mode' the func expressions are function scoped
 
 // console.log(calcAge); // Initial value => for var => undefined, for let or const => Ref Error
 
@@ -23,4 +23,4 @@ const calcAge = function (age) {
   return age + 5;
 };
 
-// // ***** So function declarations are hoisted.
+// // ***** So function expressions are hoisted or not is depends on the way they declared.
