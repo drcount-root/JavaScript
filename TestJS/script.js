@@ -112,10 +112,33 @@ const addArrow = (a, b) => a + b;
 // Example of 'var' hoisting error
 
 console.log(numProducts);
-if(!numProducts) deleteShoppingCart();  // As value of 'numProducts' is hoisted to 'undefined' here, so it's falsy value.
+if (!numProducts) deleteShoppingCart(); // As value of 'numProducts' is hoisted to 'undefined' here, so it's falsy value.
 
 var numProducts = 10;
 
-function deleteShoppingCart(){
-    console.log('All products deleted!');
+function deleteShoppingCart() {
+  console.log('All products deleted!');
 }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var x = 1;
+let y = 2;
+const z = 3;
+
+// variables declared with let or const don't create properties on the window object. Only variables declared with 'var' creates properties on the window object.
+
+console.log(x === window.x); // true   window.x = 1
+
+console.log(y === window.y); // false   window.y = undefined
+
+console.log(z === window.z); // false   window.z = undefined
