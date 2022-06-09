@@ -109,3 +109,13 @@ const addArrow = (a, b) => a + b;
 //
 //
 //
+// Example of 'var' hoisting error
+
+console.log(numProducts);
+if(!numProducts) deleteShoppingCart();  // As value of 'numProducts' is hoisted to 'undefined' here, so it's falsy value.
+
+var numProducts = 10;
+
+function deleteShoppingCart(){
+    console.log('All products deleted!');
+}
