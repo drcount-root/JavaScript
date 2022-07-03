@@ -1,0 +1,32 @@
+#parent {
+  background-color: #212121;
+  margin: auto;
+  width: 256px;
+  height: 256px;
+  position: relative;
+}
+
+#child-1 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ff8a80;
+  position: relative;
+}
+
+#child-2 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #69f0ae;
+  position: relative;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+#child-3 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffee58;
+  position: relative;
+  left: 2rem;
+  bottom: 2rem;
+}

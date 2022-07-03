@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Activity</title>
+    <style>
+      main {
+        /* tag */
+        background-color: red;
+      }
+      .main {
+        /* class has priority over tags */
+        background-color: blue;
+      }
+      #main {
+        /* id has priority over class */
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main" id="main">
+      <p>This is a para inside child</p>
+    </main>
+  </body>
+</html>

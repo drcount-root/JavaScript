@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Quote kanye</h1>
+    <p id="quote"></p>
+    <script>
+      // Starter code
+      function fetchQuote() {
+        /**
+         * API - https://api.kanye.rest/
+         * Return a promise from this function using fetch()
+         * The data should be in JSON format
+         * Catch the error, if any.
+         */
+        const url = "https://api.kanye.rest/";
+        //  fetch(url).then(responseObj => responseObj.json())
+        const jsonDataPromise = fetch(url).then((responseObj) => {
+          return responseObj.json();
+        });
+
+        return jsonDataPromise;
+      }
+
+      function addQuoteToDOM(quote) {
+        // Display quote in the <p id="quote"></p> element
+
+        // 1. Get the existing DOM element
+        let pElement = document.getElementById("quote");
+
+        // 2. Update content of the element to the quote
+        pElement.textContent = quote;
+      }
+
+      function quoteKanye() {
+        /**
+         * Use fetchQuote and addQuoteToDOM() function
+         * To display the quote on the Page.
+         */
+        let jsonDataPromise = fetchQuote();
+        // console.log(jsonDataPromise);
+        jsonDataPromise.then((data) => {
+          let quote = data.quote;
+          addQuoteToDOM(quote);
+        });
+      }
+
+      quoteKanye();
+      // addQuoteToDOM("Dummy quote");
+    </script>
+    <script>
+      // function fetchQuote() {
+      //   /**
+      //    * API - https://api.kanye.rest/
+      //    * Return a promise from this function using fetch()
+      //    * The data should be in JSON format
+      //    * Catch the error, if any.
+      //    */
+      //   const url = "https://api.kanye.rest/";
+      //   //  fetch(url).then(responseObj => responseObj.json())
+      //   const jsonDataPromise = fetch(url).then((responseObj) => {
+      //     return responseObj.json();
+      //   });
+
+      //   return jsonDataPromise.then((data) => data.quote);
+      // }
+
+      // function addQuoteToDOM(quote) {
+      //   // Display quote in the <p id="quote"></p> element
+
+      //   // 1. Get the existing DOM element
+      //   let pElement = document.getElementById("quote");
+
+      //   // 2. Update content of the element to the quote
+      //   pElement.textContent = quote;
+      // }
+
+      // function quoteKanye() {
+      //   /**
+      //    * Use fetchQuote and addQuoteToDOM() function
+      //    * To display the quote on the Page.
+      //    */
+      //   let quotePromise = fetchQuote();
+      //   // console.log(quotePromise);
+      //   quotePromise.then((data) => {
+      //     console.log(data);
+
+      //   });
+      //   // console.log(jsonDataPromise);
+      //   // jsonDataPromise.then((data) => {
+      //   //   let quote = data.quote;
+      //   //   addQuoteToDOM(quote);
+      //   // });
+      // }
+
+      // quoteKanye();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: repeat(2, 8rem);
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px;
+}
+
+.item-1 {
+  background-color: red;
+}
+
+.item-2 {
+  background-color: violet;
+}
+
+.item-3 {
+  background-color: coral;
+}
+
+.item-4 {
+  background-color: yellow;
+}
+
+.item-5 {
+  background-color: greenyellow;
+}
+
+.item-6 {
+  background-color: teal;
+}

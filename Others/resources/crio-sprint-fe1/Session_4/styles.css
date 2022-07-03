@@ -1,0 +1,41 @@
+body {
+  background-color: snow;
+}
+
+h1 {
+  color: indigo;
+}
+
+p {
+  color: gray;
+}
+
+#anna {
+  background-color: darkcyan;
+  color: honeydew;
+}
+
+#anna p {
+  color: beige;
+}
+
+#harry {
+  background-color: cornsilk;
+  color: darkslategray;
+}
+
+#sofia {
+  background-color: dodgerblue;
+  color: navy;
+}
+#sofia p {
+  color: lightcyan;
+}
+
+section.team-member {
+  width: 256px;
+}
+
+.team-member p {
+  opacity: 0.8;
+}

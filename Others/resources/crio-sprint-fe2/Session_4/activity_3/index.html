@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="card">
+      <h1>New Student Name</h1>
+      <h3>Role</h3>
+      <p>Bio Text Goes Here</p>
+    </section>
+    <script>
+      let cardElement = document.getElementById("card");
+      let cardArr = Array.from(cardElement.children);
+      cardArr[1].innerHTML = `<div> <b>Instructor</b> </div>`;
+
+      /// creating adding to the dom
+
+      const element = document.getElementById("elem");
+
+      // create new element
+      let newElemnt = document.createElement("li");
+      newElemnt.innerText = "Utkarsh";
+
+      console.log(newElemnt);
+
+      // adding the element in dom
+
+      // way 1 ->
+      element.innerHTML = element.innerHTML + "<li>This is new point</li>";
+
+      // console.log(arr);
+    </script>
+  </body>
+</html>

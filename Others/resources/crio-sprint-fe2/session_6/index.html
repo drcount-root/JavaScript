@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    Github activity
+    <script>
+      // Output: Promise which when resolved -> Array of usernames
+      function getUsers() {
+        let url = "https://api.github.com/users";
+
+        // 1. Get the json data
+        let respObjPromise = fetch(url);
+
+        let dataPromise = respObjPromise.then((respObject) => {
+          return respObject.json();
+        });
+
+        let usernamesPromise = dataPromise.then((data) => {
+          // 2. Process the data to get array of just usernames
+          let usernamesArray = data.map((obj) => {
+            return obj.login;
+          });
+          return usernamesArray;
+        });
+
+        return usernamesPromise;
+      }
+
+      let output = getUsers();
+      output.then((value) => console.log(value));
+      // console.log(output);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+#parent {
+  background-color: #212121;
+  margin: auto;
+  width: 256px;
+  height: 256px;
+}
+
+#child-1 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ff8a80;
+}
+
+#child-2 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #69f0ae;
+}
+
+#child-3 {
+  width: 2rem;
+  height: 2rem;
+  background-color: #ffee58;
+}
