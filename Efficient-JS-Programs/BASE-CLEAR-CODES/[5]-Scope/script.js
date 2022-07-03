@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // function calcAge(birthYear) {
 //   const age = 2037 - birthYear;
@@ -56,7 +56,7 @@ function calcAge(birthYear) {
     if (birthYear >= 1981 && birthYear <= 1996) {
       var millenial = true;
 
-      const firstName = 'Steven'; // if we add this line of code, then in 'str' variable, the value of 'firstName' will be 'Steven' as the variable lookup happens inside the current scope first, and if find then it will not look anywhere else.
+      const firstName = "Steven"; // if we add this line of code, then in 'str' variable, the value of 'firstName' will be 'Steven' as the variable lookup happens inside the current scope first, and if find then it will not look anywhere else.
 
       const str = `Oh, and you're a millenial, ${firstName}`;
 
@@ -68,7 +68,7 @@ function calcAge(birthYear) {
         return a + b;
       }
 
-      output = 'NEW OUTPUT';
+      output = "NEW OUTPUT";
 
       // let output = 'NEW OUTPUT'; // If we did this, it will not effect. As it will be treated as a completely new variable & would not at all affect the output from the outer scope.
     }
@@ -89,6 +89,48 @@ function calcAge(birthYear) {
   return age;
 }
 
-const firstName = 'Jonas';
+const firstName = "Jonas";
 
 console.log(calcAge(1991));
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// lexical-scope example
+
+//
+//
+
+function showLastName() {
+  const lastName = "Sahu";
+  return lastName;
+}
+
+function displayFullName() {
+  const fullName = "Subham " + lastName;
+  return fullName;
+}
+
+// console.log(displayFullName()); // ReferenceError: lastName is not defined at displayFullName
+
+// Here inside displayFullName() func we can't access the lastName variable because of "Lexical Scoping"
+
+// Both functions are globally declared & they are also siblings to each other.
+
+//
+//
+
+function displayFullName1() {
+  const fullName = "Subham " + showLastName(); // Calling showLastName() func returns the value of lastName.
+  return fullName;
+}
+
+console.log(displayFullName1());
