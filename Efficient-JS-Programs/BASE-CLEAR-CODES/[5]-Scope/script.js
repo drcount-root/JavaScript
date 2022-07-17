@@ -119,11 +119,9 @@ function displayFullName() {
   return fullName;
 }
 
-// console.log(displayFullName()); // ReferenceError: lastName is not defined at displayFullName
+// console.log(displayFullName()); // ReferenceError: lastName is not defined at displayFullName()
 
 // Here inside displayFullName() func we can't access the lastName variable because of "Lexical Scoping". The error returned because only code within an lexical scope can access the item. Therefore, neither the displayFullName() function nor its internal code can access the lastName variable as lastName got defined in a different scope.
-
-// Both functions are globally declared & they are also siblings to each other.
 
 // lastName’s lexical scope is different from that of displayFullName(). Only code within an item's lexical scope can access it.
 
@@ -135,3 +133,5 @@ function displayFullName1() {
 }
 
 console.log(displayFullName1());
+
+// In the snippet above, displayFullName() successfully returned "Subham Sahu" because displayFullName() and showLastName() are in the same lexical scope.
