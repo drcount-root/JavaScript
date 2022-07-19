@@ -66,5 +66,22 @@ const jonas = {
 };
 
 jonas.calcAgeMethod();
+//
 // jonas is the owner of the calcAgeMethod() method
 // this -> global Windoow object
+
+// Here calcAgeMethod() method is written inside of jonas object.
+// We might think that is the reason why this keyword points to jonas, but it's not true.
+
+// The reason that the this keyword will point to jonas, in this case is because jonas was the object calling debt method.
+//
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAgeMethod = jonas.calcAgeMethod; // method borrowing (coping method of an object to another object)
+
+console.log(matilda);
+
+console.log(matilda.calcAgeMethod());
