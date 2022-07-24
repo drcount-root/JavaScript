@@ -68,7 +68,7 @@ const jonas = {
 jonas.calcAgeMethod();
 //
 // jonas is the owner of the calcAgeMethod() method
-// this -> global Windoow object
+// this -> jonas object
 
 // Here calcAgeMethod() method is written inside of jonas object.
 // We might think that is the reason why this keyword points to jonas, but it's not true.
