@@ -85,7 +85,7 @@ const honas = {
   },
 };
 
-console.log(honas.calcAge());
+console.log(honas.calcAge()); // 25
 
 //
 
@@ -97,4 +97,18 @@ matilda.calcAge = honas.calcAge; // method borrowing (coping method of an object
 
 console.log(matilda); // matilda object with 'year' variable & calcAge() method
 
-console.log(matilda.calcAge());
+console.log(matilda.calcAge()); // 24
+//
+//
+//
+//
+//
+//
+
+const f = honas.calcAge; // calcAge() method from honas object copied to f variable as calcAge() function.
+
+f(); // f() function here is a regular function call, it is not attached to any object. So no owner of f() function.
+
+// calcAge: function () {return 2022 - this.year;}  Here this keyword holds value undefined as it comes from global. And for strict mode global this = undefined.
+
+// undefined.year() doesn't make any sense. So TypeError.
