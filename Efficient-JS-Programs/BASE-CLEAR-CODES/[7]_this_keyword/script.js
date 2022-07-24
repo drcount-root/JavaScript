@@ -107,8 +107,70 @@ console.log(matilda.calcAge()); // 24
 
 const f = honas.calcAge; // calcAge() method from honas object copied to f variable as calcAge() function.
 
-f(); // f() function here is a regular function call, it is not attached to any object. So no owner of f() function.
+// f(); // f() function here is a regular function call, it is not attached to any object. So no owner of f() function.
 
 // calcAge: function () {return 2022 - this.year;}  Here this keyword holds value undefined as it comes from global. And for strict mode global this = undefined.
 
 // undefined.year() doesn't make any sense. So TypeError.
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// this keyword for both (Regular Function vs Arrow Function)
+console.log(
+  `-------------------- this keyword for both (Regular Function vs Arrow Function) --------------------`
+);
+
+const jonas1 = {
+  firstNam: "Jonas",
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+
+  greet: () => {
+    console.log(this); // Window object
+    console.log(`Hey ${this.firstNam}`);
+  },
+};
+
+// jonas1 is not a code block, it is an object literal. And object literal can't create it's own scope. jonas1 object is in global scope.
+
+jonas1.greet(); // An arrow function doesn't get it's own this keyword, instead it uses the this keyword from it's surroundings.
+
+// So in greet() method the value of this keyword = parent's this keyword. Parent scope of greet() method is global scope.
+
+console.log(this.firstNam); // If we try to access a property that doesn't exists on a certain object, we do not get an error, but simply undefined.
+//
+//
+//
+// this thing can become preety dangerous, in case we use var to declare variables.
+
+// As variables declared with var, actually create properties on global object.
+
+var firstNam = "Matilda";
+
+const jonas2 = {
+  firstNam: "Jonas",
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+
+  greet: () => {
+    console.log(this); // Window object
+    console.log(`Hey ${this.firstNam}`);
+  },
+};
+
+jonas2.greet(); // Now in this case Window object have a property named firstNam = 'Matilda';
