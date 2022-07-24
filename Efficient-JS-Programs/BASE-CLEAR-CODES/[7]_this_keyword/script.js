@@ -73,15 +73,28 @@ jonas.calcAgeMethod();
 // Here calcAgeMethod() method is written inside of jonas object.
 // We might think that is the reason why this keyword points to jonas, but it's not true.
 
-// The reason that the this keyword will point to jonas, in this case is because jonas was the object calling debt method.
+// The reason that the this keyword will point to jonas, in this case is because jonas was the object calling that method.
+//
+//
+//
+//
+const honas = {
+  year: 1997,
+  calcAge: function () {
+    return 2022 - this.year;
+  },
+};
+
+console.log(honas.calcAge());
+
 //
 
 const matilda = {
-  year: 2017,
+  year: 1998,
 };
 
-matilda.calcAgeMethod = jonas.calcAgeMethod; // method borrowing (coping method of an object to another object)
+matilda.calcAge = honas.calcAge; // method borrowing (coping method of an object to another object)
 
-console.log(matilda);
+console.log(matilda); // matilda object with 'year' variable & calcAge() method
 
-console.log(matilda.calcAgeMethod());
+console.log(matilda.calcAge());
