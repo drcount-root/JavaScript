@@ -190,9 +190,8 @@ const jonas3 = {
 
     // -------- function inside a method --------
 
-
     // Sol 1
-    // 
+    //
     // const self = this; // Preserving this keyword (self or that) to use inside the function bellow using scope chain.
 
     // const isMillenial = function () {
@@ -202,15 +201,17 @@ const jonas3 = {
     //   console.log(self.year >= 1981 && self.year <= 1996);
     // };
     // isMillenial(); // this is a regular function call, even though it happens inside of a method. The rule said that, inside a function call the this keyword must be undefined.
-    // 
-    // 
-    // 
-    // 
+    //
+    //
+    //
+    //
     // Sol 2
-    // 
-    const isMillenial = function(){
-      
-    }
+    //
+    const isMillenial = () => {
+      console.log(this); // jonas3 object itself
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
 
   greet: () => {
@@ -222,3 +223,29 @@ const jonas3 = {
 jonas3.greet();
 
 jonas3.calcAge();
+//
+//
+//
+// arguments keyword
+//
+// Arguments keyword for regular function
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+
+addExpr(2, 5);
+addExpr(2, 5, 8, 12); // completely leagal to add more arguments and they will be visible in arguments array.
+//
+//
+// Arguments keyword for arrow function
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+
+addArrow(2, 5, 8); // ReferenceError, 'arguments' is not defined. 'arguments' keyword doesn't exists for arrow functions.
+//
+//
+//
+// * 'arguments' keyword presents for function declarations & expressions.
