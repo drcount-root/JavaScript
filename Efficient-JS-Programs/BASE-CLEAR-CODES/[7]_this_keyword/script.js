@@ -179,27 +179,46 @@ jonas2.greet(); // Now in this case Window object have a property named firstNam
 //
 //
 //
-// function inside a method
+// Regular function inside a method
 
-// const jonas3 = {
-//   firstNam: "Jonas",
-//   year: 1991,
-//   calcAge: function () {
-//     console.log(this);
-//     console.log(2037 - this.year);
+const jonas3 = {
+  firstNam: "Jonas",
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
 
-//     const isMillenial = function () {
-//       console.log(this.year >= 1981 && this.year <= 1996);
-//     };
-//     isMillenial();
-//   },
+    // -------- function inside a method --------
 
-//   greet: () => {
-//     console.log(this); // Window object
-//     console.log(`Hey ${this.firstNam}`);
-//   },
-// };
 
-// jonas3.greet();
+    // Sol 1
+    // 
+    // const self = this; // Preserving this keyword (self or that) to use inside the function bellow using scope chain.
 
-// jonas3.calcAge();
+    // const isMillenial = function () {
+    //   // console.log(this);
+    //   console.log(self);
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+    // isMillenial(); // this is a regular function call, even though it happens inside of a method. The rule said that, inside a function call the this keyword must be undefined.
+    // 
+    // 
+    // 
+    // 
+    // Sol 2
+    // 
+    const isMillenial = function(){
+      
+    }
+  },
+
+  greet: () => {
+    console.log(this); // Window object
+    console.log(`Hey ${this.firstNam}`);
+  },
+};
+
+jonas3.greet();
+
+jonas3.calcAge();
