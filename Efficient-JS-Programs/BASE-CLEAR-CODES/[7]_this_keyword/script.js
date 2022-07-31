@@ -174,3 +174,32 @@ const jonas2 = {
 };
 
 jonas2.greet(); // Now in this case Window object have a property named firstNam = 'Matilda';
+
+//
+//
+//
+//
+// function inside a method
+
+// const jonas3 = {
+//   firstNam: "Jonas",
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+
+//     const isMillenial = function () {
+//       console.log(this.year >= 1981 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+
+//   greet: () => {
+//     console.log(this); // Window object
+//     console.log(`Hey ${this.firstNam}`);
+//   },
+// };
+
+// jonas3.greet();
+
+// jonas3.calcAge();
